@@ -1,0 +1,35 @@
+package org.example;
+
+import java.time.LocalDate;
+
+public class ExpenseLogic extends Expanse{
+
+    LocalDate _localDate;
+    String _description;
+    double _amount;
+
+    public ExpenseLogic(String description, double amount){
+
+        this._id++;
+        this._localDate = LocalDate.now();
+        this._description = description;
+        this._amount = amount;
+
+    }
+
+    public String getDescription(){
+        return _description;
+    }
+
+    public double getAmount(){
+        return _amount;
+    }
+
+    public void setAmount(double _amount) {
+        this._amount = _amount;
+    }
+
+    public void setDescription(String _description) {
+        this._description = _description;
+    }
+}
