@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class ExpenseLogic extends Expanse{
 
+    int _id;
     LocalDate _localDate;
     String _description;
     double _amount;
@@ -19,6 +20,14 @@ public class ExpenseLogic extends Expanse{
 
     public String getDescription(){
         return _description;
+    }
+
+    public int getId(){
+        return _id ;
+    }
+
+    public LocalDate getLocalDate(){
+        return _localDate;
     }
 
     public double getAmount(){
