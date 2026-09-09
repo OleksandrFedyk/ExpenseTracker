@@ -9,9 +9,9 @@ public class ExpenseLogic extends Expanse{
     String _description;
     double _amount;
 
-    public ExpenseLogic(String description, double amount){
+    public ExpenseLogic(int id, String description, double amount){
 
-        this._id++;
+        this._id = id;
         this._localDate = LocalDate.now();
         this._description = description;
         this._amount = amount;

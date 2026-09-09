@@ -8,9 +8,10 @@ import java.util.Objects;
 public class Expanse {
 
     List<ExpenseLogic> expenses = new ArrayList<ExpenseLogic>();
-
-    public void addExpense(ExpenseLogic expenseLogic){
-        expenses.add(expenseLogic);
+    private int nextId = 1;
+    public void addExpense(String description, double amount) {
+        ExpenseLogic item = new ExpenseLogic(nextId++, description, amount);
+        expenses.add(item);
     }
 
     public void showExpenses() {
@@ -42,6 +43,15 @@ public class Expanse {
             }
         }
         System.out.println("No expense found matching: " + expenseDescription);
+    }
+
+    public void addAllExpenses(){
+
+        double total = 0;
+        for(ExpenseLogic item: expenses){
+            total += item.getAmount();
+        }
+        System.out.println(total);
     }
 
     public Expanse(){}
